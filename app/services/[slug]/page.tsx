@@ -7,7 +7,7 @@ import { ArrowDisc, vars } from '@/components/Icons';
 import { CheckList, FeatureGrid, Head, ServiceCard } from '@/components/page/Cards';
 import PageHero from '@/components/page/PageHero';
 import Process from '@/components/Process';
-import { cloudStrategyDetail, serviceBySlug, services, sevenRs } from '@/lib/services';
+import { cloudStrategyDetail, serviceBySlug, services, sevenRs, wellArchitectedPillars } from '@/lib/services';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -31,7 +31,6 @@ export default async function ServicePage({ params }: Props) {
   const s = serviceBySlug((await params).slug);
   if (!s) notFound();
   const related = s.related.map((r) => serviceBySlug(r)!).filter(Boolean);
-  const quoteHref = `/contact?tab=quote&service=${encodeURIComponent(s.name)}`;
   const isAws = s.slug === 'aws-solutions-architect';
 
   return (
@@ -43,14 +42,9 @@ export default async function ServicePage({ params }: Props) {
         lede={s.lede}
         image={s.image}
         actions={
-          <>
-            <Link href="/contact" className="btn btn-primary">
-              Book a free consultation <ArrowDisc />
-            </Link>
-            <Link href={quoteHref} className="btn btn-outline">
-              Get a quote
-            </Link>
-          </>
+          <Link href="/contact" className="btn btn-light">
+            Contact us <ArrowDisc />
+          </Link>
         }
       />
 
@@ -89,6 +83,25 @@ export default async function ServicePage({ params }: Props) {
 
       {isAws && (
         <>
+          <section className="pillars-band section-pad">
+            <div className="container">
+              <Head
+                dark
+                label="AWS Well-Architected Framework"
+                title="Six pillars of the AWS Well-Architected Framework."
+                side={<p>Every review and every design we deliver is structured around these six pillars, so your platform is secure, resilient and ready for what comes next.</p>}
+              />
+              <div className="pillars-grid">
+                {wellArchitectedPillars.map((p, i) => (
+                  <div key={p.title} className="pillar-card" data-reveal style={vars({ '--d': (i % 3) * 90 })}>
+                    <span className="pillar-no">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="pillar-title">{p.title}</span>
+                    <span className="pillar-desc">{p.desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
           <section className="container section-pad">
             <Head label="Cloud strategy services" title="From readiness to review, every step covered." side={<p>Five structured services that take you from first questions to a well-architected platform.</p>} />
             <div className="strategy-list">

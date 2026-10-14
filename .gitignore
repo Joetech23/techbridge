@@ -9,3 +9,8 @@ npm-debug.log*
 .DS_Store
 .claude/
 .vercel/
+
+# Client material and unrelated work kept in this folder; never commit
+TechBridge_Update_14Oct2026/
+arcmarshal-videos/
+*.docx

@@ -5,7 +5,7 @@ import { ArrowDisc, Motif, vars } from './Icons';
 import Photo from './Photo';
 
 const white = ['Your', 'bridge', 'to', 'the', 'cloud,'];
-const pale = ['built', 'secure', 'from', 'day', 'one.'];
+const pale = ['built', 'securely', 'from', 'day', 'one.'];
 
 /** Full-screen photo hero: heavy uppercase headline, bold lede, pill CTAs and the squares motif. */
 export default function Hero() {
@@ -45,7 +45,7 @@ export default function Hero() {
           </p>
           <div className="hero-ctas hero-in" style={vars({ '--d': 1020 })}>
             <Link href="/contact" className="btn btn-light">
-              Book a consultation <ArrowDisc />
+              Contact us <ArrowDisc />
             </Link>
             <a href="#services" className="btn btn-ghost">
               Our services <ArrowDisc />
@@ -63,12 +63,12 @@ export default function Hero() {
         </div>
         <div className="band-photo-inner">
           <h2 className="h2" data-reveal>
-            AWS Well-Architected Reviews. Now booking.
+            Six pillars of the AWS Well-Architected Framework.
           </h2>
           <div data-reveal style={vars({ '--d': 120 })}>
             <p>
-              Six pillars, one report. Our architects review your AWS workloads for security, reliability, performance and cost, and hand you a prioritised plan to
-              fix what matters first.
+              Operational excellence, security, reliability, performance efficiency, cost optimisation and sustainability. Our architects review your AWS
+              workloads against all six and hand you a prioritised plan to fix what matters first, so your platform stays resilient as you grow.
             </p>
             <div className="band-ctas">
               <Link href="/services/aws-solutions-architect" className="btn btn-light">

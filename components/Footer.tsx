@@ -18,7 +18,7 @@ export default function Footer() {
             <p>One practical email a month on cloud, security and data. No sales pitches.</p>
             <Briefing bare />
             <Link href="/contact" className="btn btn-pale">
-              Book a free consultation <ArrowDisc />
+              Contact us <ArrowDisc />
             </Link>
           </div>
         </div>

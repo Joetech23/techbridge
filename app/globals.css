@@ -6740,6 +6740,500 @@ button.text-link {
 }
 
 /* ==========================================================================
+   Client update, 14 Oct 2026
+   ========================================================================== */
+
+/* Heading spacing: wider letters and words so heavy uppercase headings read as separate words
+   (e.g. "DEVOPS MATURITY ASSESSMENT"). Applies to every heading style on the site. */
+.h2,
+.page-title,
+.hero-title,
+.footer-cta-title {
+  letter-spacing: 0.012em;
+  word-spacing: 0.14em;
+}
+.hero-title {
+  line-height: 0.95;
+}
+.feature-title,
+.svc-card-name,
+.case-title,
+.post-card-title,
+.tl-title,
+.faq-q,
+.value-card-title,
+.challenge-title,
+.contact-card-title,
+.footer-col-title,
+.plan-name,
+.opening-title,
+.strategy-title,
+.discipline-title,
+.other-name,
+.ind-name,
+.aside-title,
+.rs-name,
+.partner-name,
+.standard-name,
+.pending-title,
+.join-title,
+.link-panel-title,
+.outcomes-title,
+.done-title,
+.devops-name,
+.briefing-title,
+.prose h2,
+.mega-card-title,
+.mega-feature-title,
+.model-title,
+.ccard-title,
+.ncard-title,
+.span-title,
+.scard-title,
+.offer-title,
+.circle-title,
+.member-name,
+.pillar-title,
+.job-title,
+.trusted-item,
+.label,
+.btn,
+.tab,
+.filter {
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
+}
+
+/* AWS flagship band: navy instead of blue-on-blue */
+.accent-band {
+  background: var(--navy);
+}
+.accent-band .h2 {
+  color: #fff;
+}
+.accent-grid p {
+  color: var(--pale);
+}
+
+/* Inner-page heroes: the primary action is white on the dark band */
+.page-hero .btn-light:hover {
+  background: var(--peri);
+}
+
+/* ---------- Six pillars (AWS page) ---------- */
+.pillars-band {
+  background: var(--peri);
+}
+.pillars-band .label {
+  color: var(--ink);
+}
+.pillars-band .section-head-side p {
+  color: #1b2553;
+}
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background: #fff;
+  border-top: 5px solid var(--blue);
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s;
+}
+.pillar-card:nth-child(2) {
+  border-top-color: var(--amber);
+}
+.pillar-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 var(--navy);
+}
+.pillar-no {
+  font-family: var(--font-code);
+  font-size: 13px;
+  color: var(--blue);
+}
+.pillar-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.pillar-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* ---------- Team: uniform cards + profile dialog ---------- */
+button.member {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  align-items: stretch;
+}
+button.member:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+.profile-dialog {
+  width: min(1040px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  padding: 0;
+  border: 0;
+  background: #fff;
+  color: var(--ink);
+  overflow: auto;
+}
+.profile-dialog::backdrop {
+  background: rgba(7, 12, 40, 0.72);
+}
+.profile-dialog[open] {
+  animation: dialogIn 0.45s var(--ease-out) both;
+}
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+.pd-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+.pd-photo {
+  position: relative;
+  min-height: 460px;
+  background: var(--navy);
+}
+.pd-body {
+  padding: clamp(28px, 4vw, 52px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pd-body .h2 {
+  font-size: clamp(30px, 3.4vw, 46px);
+  margin: 4px 0 8px;
+}
+.pd-body p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+}
+.pd-body .pd-lede {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--ink);
+}
+.pd-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--navy);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.pd-close:hover {
+  background: var(--blue);
+}
+.team-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ---------- Careers job board ---------- */
+.jobs {
+  display: flex;
+  flex-direction: column;
+}
+.jobs-search {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto;
+  gap: 12px;
+  padding: 22px;
+  background: var(--tint);
+  align-items: center;
+}
+.jobs-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 54px;
+  padding: 0 18px;
+  background: #fff;
+  border: 1px solid var(--line-2);
+  color: var(--muted);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.jobs-field:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(11, 59, 219, 0.1);
+}
+.jobs-field input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  font-size: 15px;
+  color: var(--ink);
+  background: transparent;
+}
+.jobs-search .btn {
+  height: 54px;
+}
+.jobs-remote {
+  grid-column: 1 / -1;
+}
+.jobs-types {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--line);
+  border-top: 0;
+}
+.jobs-types .jobs-check {
+  padding: 14px 20px;
+  border-right: 1px solid var(--line);
+}
+.jobs-check {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+.jobs-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.jobs-box {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--line-2);
+  display: grid;
+  place-items: center;
+  color: transparent;
+  background: #fff;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.jobs-check input:checked + .jobs-box {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+.jobs-check input:focus-visible + .jobs-box {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.jobs-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border: 1px solid var(--line);
+  border-top: 0;
+  background: var(--tint);
+  font-size: 14px;
+  color: var(--text);
+}
+.jobs-reset {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.jobs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.job {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px 40px;
+  align-items: center;
+  padding: 28px 20px;
+  border: 1px solid var(--line);
+  border-top: 0;
+  animation: caseIn 0.6s var(--ease-out) both;
+  animation-delay: calc(var(--i) * 80ms);
+  transition: background 0.25s;
+}
+.job:hover {
+  background: var(--tint);
+}
+.job-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.job-type {
+  font-family: var(--font-head);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  color: var(--blue);
+}
+.job-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.job-desc {
+  max-width: 760px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.job .chips {
+  margin-top: 4px;
+}
+.jobs-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 20px;
+  border: 1px solid var(--line);
+  border-top: 0;
+  font-size: 15px;
+  color: var(--text);
+}
+.jobs-empty a,
+#apply .lede a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+@media (max-width: 999px) {
+  .pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pd-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pd-photo {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .jobs-search {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .pillars-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .job {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .jobs-types .jobs-check {
+    flex: 1 1 50%;
+  }
+}
+
+/* ---------- Careers: CV upload ---------- */
+.cv-upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1.5px dashed var(--line-2);
+  background: var(--tint);
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+}
+.cv-upload:hover,
+.cv-upload:focus-within {
+  border-color: var(--blue);
+  background: var(--tint-2);
+}
+.cv-upload.has-file {
+  border-style: solid;
+  border-color: var(--blue);
+  background: var(--tint-2);
+}
+.cv-upload.invalid {
+  border-color: #e5484d;
+}
+.cv-upload input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.cv-upload-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+.cv-upload-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.cv-upload-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cv-upload-hint {
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* ==========================================================================
    Reduced motion
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {

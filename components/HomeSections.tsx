@@ -81,7 +81,7 @@ export function WhyCircles() {
             Why clients choose TechBridge.
           </h2>
           <p data-reveal style={vars({ '--d': 100 })}>
-            Good architecture is cheaper than fixing bad architecture. We bring senior thinking early, prove it works, and build security in from the first design.
+            We translate your business needs into clear technical deliverables and secure designs, prove the approach early, and stay to keep it running.
           </p>
         </div>
         <div className="circles">
@@ -127,8 +127,8 @@ export function AccentBand() {
           </h2>
           <div data-reveal style={vars({ '--d': 120 })}>
             <p>
-              Cloud architecture, system integration, proofs of concept and technology roadmaps across AWS, Azure and Google Cloud. Senior architects on demand,
-              without the cost of full-time hires.
+              Cloud architecture, system integration, proof of concepts and technology roadmaps on AWS, structured around the six pillars of the
+              Well-Architected Framework. Experienced architects on demand, without the cost of full-time hires.
             </p>
             <Link href="/services/aws-solutions-architect" className="btn btn-light">
               View AWS architect services <ArrowDisc />
@@ -288,8 +288,8 @@ export function StatsMosaic() {
             At the heart of TechBridge is one accountable team, from first assessment to day-to-day support.
           </p>
           <p data-reveal style={vars({ '--d': 180 })}>
-            We de-risk before you build, with proofs of concept that surface problems in week one. We size infrastructure and licences to what you actually need.
-            And we design security and governance into every layer, not as an afterthought.
+            We mitigate risk before you build, with proof of concepts that surface problems in week one. We size infrastructure and licences to what you actually need.
+            And we design security, resilience and governance into every layer, so your platform is future-proof, not an afterthought.
           </p>
           <div className="mosaic-ctas" data-reveal style={vars({ '--d': 240 })}>
             <Link href="/about" className="btn btn-pale">
@@ -368,8 +368,8 @@ export function Engagement() {
               <span>Flexible capacity for evolving programmes and ongoing advisory.</span>
             </div>
           </div>
-          <Link href="/contact?tab=quote" className="btn btn-dark" data-reveal style={vars({ '--d': 300 })}>
-            Request a quote <ArrowDisc />
+          <Link href="/contact" className="btn btn-dark" data-reveal style={vars({ '--d': 300 })}>
+            Contact us <ArrowDisc />
           </Link>
         </div>
       </div>

@@ -60,18 +60,22 @@ breadcrumb structured data. FAQ sections also emit FAQ structured data.
 
 - **Photography**: every photo is a free Unsplash placeholder listed in `img` in `lib/content.ts`.
   Swap in TechBridge's own photos (put them in `/public`, e.g. `/photos/team.jpg`, and replace the ids with those paths).
-- **Team**: five members are live from `team` in `lib/company.ts`, photos in `/public/team`. Still needed: bios for Calvin, Kaustuv and Melanie, and everyone's certifications.
+- **Team**: seven members are live from `team` in `lib/company.ts`, photos in `/public/team`. Still needed: bios for Calvin Agu and Kaustuv Prajapati, Dr. James's profile, better headshots for Calvin and Kaustuv, and certifications.
 - **Accreditations**: `accreditations` in `lib/company.ts`.
 - **Case studies**: real stories in `lib/cases.ts` (currently samples from the design).
 - **Hosting plans**: confirm features and prices in `hostingPlans` in `lib/services.ts`.
-- **Contact details**: `phone`, `whatsapp`, `clientPortal`, `knowledgeBase` in `site`.
+- **Contact details**: `phone`, `linkedin`, `clientPortal`, `knowledgeBase` in `site`. WhatsApp and live chat are off by decision (13 Oct).
 - **Client logos and testimonials**: `site.clientLogos`; testimonials can be added to the About page.
 - **Legal pages**: draft copy in `lib/legal.ts`. Must be reviewed by a qualified adviser before launch.
 
 ## To wire up
 
-- `app/api/contact/route.ts` validates and logs submissions. Connect it to email/CRM/calendar
-  (e.g. Resend, HubSpot, Cal.com) so bookings send real calendar invites.
+- **Form email.** `app/api/contact/route.ts` routes careers applications to onboarding@techbridgedigital.co.uk and
+  everything else to hello@techbridgedigital.co.uk. Set `RESEND_API_KEY` and `MAIL_FROM` (a verified sender on the
+  domain) in the hosting environment to actually send; without them submissions are only logged. The route needs a
+  Node server, so a pure static export to cPanel will not run it.
+- **LinkedIn.** Add the page URL to `site.linkedin` in `lib/content.ts` when DGCL has it live.
+- **Careers openings.** Edit `opportunities` in `lib/company.ts`; job type, location and remote flags still need confirming.
 - Analytics (GA4) should only load after “Accept all” in the cookie banner.
 
 ## Motion

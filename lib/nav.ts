@@ -7,11 +7,12 @@ export const companyLinks = [
   { name: 'About us', desc: 'Our story, mission, values and how we work.', href: '/about' },
   { name: 'Our team', desc: 'The consultants and architects behind the work.', href: '/team' },
   { name: 'Accreditations & partners', desc: 'Platforms, standards and certifications.', href: '/accreditations' },
-  { name: 'Careers', desc: 'Voluntary project opportunities and internships.', href: '/careers' },
+  { name: 'Careers', desc: 'Graduate scheme and internship opportunities.', href: '/careers' },
 ];
 
 export const serviceCats = [
   { label: 'Strategy & Advisory', slugs: ['digital-consulting', 'devops-maturity-assessment'] },
+  { label: 'Product & Delivery', slugs: ['product-strategy-management', 'project-delivery-management'] },
   { label: 'Cloud', slugs: ['aws-solutions-architect', 'cloud-hosting', 'hosting-packages'] },
   { label: 'Cyber Security', slugs: ['cybersecurity', 'penetration-testing'] },
   { label: 'Data, AI & ML', slugs: ['data-ai-ml'] },
@@ -33,6 +34,7 @@ export const footerCols = [
     title: 'Services',
     links: [
       { label: 'AWS Solutions', href: serviceHref('aws-solutions-architect') },
+      { label: 'Product & Delivery', href: serviceHref('project-delivery-management') },
       { label: 'Cybersecurity', href: serviceHref('cybersecurity') },
       { label: 'Penetration Testing', href: serviceHref('penetration-testing') },
       { label: 'Data, AI & ML', href: serviceHref('data-ai-ml') },
@@ -67,5 +69,5 @@ export const searchIndex = [
   { group: 'Work & Insights', title: 'Insights', desc: 'Guides, articles and the TechBridge briefing', href: '/insights' },
   ...posts.map((p) => ({ group: 'Work & Insights', title: p.title, desc: p.excerpt, href: postHref(p.slug) })),
   ...companyLinks.map((c) => ({ group: 'Company', title: c.name, desc: c.desc, href: c.href })),
-  { group: 'Contact', title: 'Contact & consultation booking', desc: 'Contact form, quote request and consultation booking', href: '/contact' },
+  { group: 'Contact', title: 'Contact us', desc: 'Send us a message and a consultant will be in touch', href: '/contact' },
 ];

@@ -81,9 +81,9 @@ export default async function PostPage({ params }: Props) {
             </div>
             <div className="aside-card dark" data-reveal="right" style={vars({ '--d': 120 })}>
               <span className="aside-title">Want a second opinion?</span>
-              <span className="aside-desc">Book a free 30-minute call with a consultant.</span>
+              <span className="aside-desc">Tell us about your project and a consultant will be in touch.</span>
               <Link href="/contact" className="btn btn-light btn-sm">
-                Book a call <ArrowDisc />
+                Contact us <ArrowDisc />
               </Link>
             </div>
           </aside>

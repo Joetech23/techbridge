@@ -21,8 +21,8 @@ export default function HostingPlans() {
                   </li>
                 ))}
               </ul>
-              <Link href={`/contact?tab=quote&service=${encodeURIComponent('Hosting Packages')}`} className={`btn ${p.featured ? 'btn-primary' : 'btn-outline'} plan-cta`}>
-                Order {p.name} <ArrowDisc />
+              <Link href="/contact" className={`btn ${p.featured ? 'btn-primary' : 'btn-outline'} plan-cta`}>
+                Enquire about {p.name} <ArrowDisc />
               </Link>
             </div>
           ))}

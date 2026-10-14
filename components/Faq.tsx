@@ -8,7 +8,7 @@ import { ArrowDisc, Plus, vars } from './Icons';
 export default function Faq({
   items = homeFaqs,
   title = 'Questions we hear a lot.',
-  lede = 'Can’t see yours? A 30-minute call is free and there’s no obligation.',
+  lede = 'Can’t see yours? Send us a message and a consultant will get back to you.',
   tint = false,
 }: {
   items?: { q: string; a: string }[];

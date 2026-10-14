@@ -202,10 +202,10 @@ export default function Header() {
                 <Photo id={img.review} sizes="320px" />
               </span>
               <span className="mega-feature-body">
-                <span className="mega-feature-kicker">Free, 30 minutes</span>
+                <span className="mega-feature-kicker">Talk to us</span>
                 <span className="mega-feature-title">Not sure where to start? Talk to an architect.</span>
                 <span className="text-link">
-                  Book a consultation <ArrowRight size={12} />
+                  Contact us <ArrowRight size={12} />
                 </span>
               </span>
             </Link>

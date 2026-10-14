@@ -15,7 +15,7 @@ export const legal: Record<'privacy' | 'cookies' | 'terms', { title: string; seo
       {
         h: 'What we collect',
         list: [
-          { t: 'Enquiries and bookings', d: 'Your name, email address, organisation and the details you share when you book a consultation, request a quote or send a message.' },
+          { t: 'Enquiries', d: 'Your name, email address, organisation and the details you share when you send us a message through the contact form.' },
           { t: 'Careers applications', d: 'Your name, email address, the opportunity you’re interested in, any links you share and what you tell us about yourself.' },
           { t: 'Newsletter', d: 'Your email address, if you subscribe to the TechBridge briefing.' },
           { t: 'Website usage', d: 'Technical information such as pages visited and device type. Analytics cookies are only used with your consent.' },
@@ -24,7 +24,7 @@ export const legal: Record<'privacy' | 'cookies' | 'terms', { title: string; seo
       {
         h: 'How we use it',
         p: [
-          'To respond to your enquiry, arrange consultations, prepare quotes, assess applications and send the newsletter you asked for. Our lawful bases are your consent, steps taken at your request before entering a contract, and our legitimate interest in running and improving our business.',
+          'To respond to your enquiry, assess job and internship applications and send the newsletter you asked for. Our lawful bases are your consent, steps taken at your request before entering a contract, and our legitimate interest in running and improving our business.',
           'We do not sell your personal data.',
         ],
       },

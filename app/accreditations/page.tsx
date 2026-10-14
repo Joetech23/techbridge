@@ -66,7 +66,7 @@ export default function AccreditationsPage() {
           <div className="pending-card" data-reveal>
             <span className="pending-title">Certifications will be listed here.</span>
             <span className="pending-desc">We’re finalising this page. If you need evidence of our accreditations for a tender or due diligence, get in touch and we’ll send it over.</span>
-            <Link href="/contact?tab=message" className="btn btn-primary btn-sm">
+            <Link href="/contact" className="btn btn-primary btn-sm">
               Request details <ArrowDisc />
             </Link>
           </div>

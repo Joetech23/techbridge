@@ -3,12 +3,15 @@
 export const site = {
   name: 'TechBridge',
   legalName: 'TechBridge Consultancy Ltd',
-  url: 'https://teckbridge.co.uk',
-  email: 'hello@teckbridge.co.uk',
+  url: 'https://www.techbridgedigital.co.uk',
+  // General enquiries (contact page, footer). Careers applications go to `onboardingEmail`.
+  email: 'hello@techbridgedigital.co.uk',
+  onboardingEmail: 'onboarding@techbridgedigital.co.uk',
   address: { street: '27 Kingston Road', city: 'London', postcode: 'SW19 1JX', country: 'GB' },
   // Day-1 content from the client (proposal §06). Leave empty until supplied; the UI falls back gracefully.
   phone: '',
-  whatsapp: '', // e.g. 'https://wa.me/44XXXXXXXXXX'
+  // WhatsApp and live chat are switched off by decision (demo session, 13 Oct 2026). Contact form only.
+  linkedin: '', // DGCL to supply once the LinkedIn page is live
   clientPortal: '#',
   knowledgeBase: '#',
   teamPhoto: '', // e.g. '/assets/team.jpg'
@@ -20,14 +23,14 @@ export const site = {
  * Replace with TechBridge's own photos when supplied.
  */
 export const img = {
-  heroWide: 'photo-1590650589327-3f67c43ad8a2',
+  heroWide: 'photo-1531482615713-2afd69097998',
   bandDark: 'photo-1680459575585-390ed5cfcae0',
-  mosaicA: 'photo-1758691736934-e5d6d0c7f875',
+  mosaicA: 'photo-1613186941372-f19da23e373b',
   mosaicB: 'photo-1758691737138-7b9b1884b1db',
-  mosaicC: 'photo-1758518726324-62bef7c815b0',
+  mosaicC: 'photo-1576267423445-b2e0074d68a4',
   heroMain: 'photo-1758518731706-be5d5230e5a5',
   heroSmall: 'photo-1611095790444-1dfa35e37b52',
-  process: 'photo-1622675363311-3e1904dc1885',
+  process: 'photo-1573164574511-73c773193279',
   office: 'photo-1652049133878-fefb2a6a2130',
   datacentre: 'photo-1564457461758-8ff96e439e83',
   rack: 'photo-1695668548342-c0c1ad479aee',
@@ -49,7 +52,7 @@ export const img = {
   teamHuddle: 'photo-1690383922983-90d7a4658ef3',
   monitoring: 'photo-1526628953301-3e589a6a8b74',
   towerBridge: 'photo-1513026705753-bc3fffca8bf4',
-  meeting: 'photo-1557804506-669a67965ba0',
+  meeting: 'photo-1573879404555-3f82d0582798',
 };
 
 /** Unsplash id → URL. Local paths (e.g. '/photos/team.jpg' in /public) pass straight through. */
@@ -65,15 +68,15 @@ export const platforms = ['AWS', 'Microsoft Azure', 'Google Cloud', 'Microsoft 3
 
 // Proposal §03: AWS Solutions Architect Services, in full.
 export const awsDeliver = [
-  { title: 'Cloud Architecture', desc: 'Design and migrate workloads across AWS, Azure and Google Cloud, with a focus on scalability and security.', image: img.datacentre },
+  { title: 'Cloud Architecture', desc: 'Design and migrate workloads on AWS, with a focus on scalability, resilience and security.', image: img.datacentre },
   { title: 'System Integration', desc: 'Build frameworks so hardware, software and data repositories communicate smoothly.', image: img.rack },
-  { title: 'Proof of Concept', desc: 'Test and validate technology choices early, to reduce major risks before full rollout.', image: img.stickies },
+  { title: 'Proof of Concepts', desc: 'Test and validate technology choices early, to mitigate major risks before full rollout.', image: img.stickies },
   { title: 'Technology Roadmaps', desc: 'Plan phased transitions, modernisation and legacy system refactoring.', image: img.whiteboard },
   { title: 'Security & Compliance', desc: 'Embed data protection, threat safeguarding and governance standards into every layer of the design.', image: img.secDesk },
 ];
 
 export const awsValue = [
-  { title: 'De-risking projects', desc: 'Avoid costly failures caused by poor initial planning or a mismatched tech stack.' },
+  { title: 'Mitigating project risk', desc: 'Avoid costly failures caused by poor initial planning or a mismatched tech stack.' },
   { title: 'Cost optimisation', desc: 'The right infrastructure sizes and licence models for the best technical return.' },
   { title: 'Architecture as a Service', desc: 'Flexible, on-demand expert guidance without full-time senior hires.' },
 ];
@@ -88,14 +91,15 @@ export const steps = [
 ];
 
 export const whys = [
-  { icon: 'flask', title: 'De-risk before you build', desc: 'Proofs of concept test technology choices early, so costly surprises surface in week one, not month six.' },
-  { icon: 'scale', title: 'Spend where it counts', desc: 'Right-sized infrastructure and licence models that get the most from every pound.' },
-  { icon: 'compass', title: 'Architecture as a Service', desc: 'Senior guidance when you need it, without the cost of full-time senior hires.' },
+  { icon: 'flask', title: 'Mitigate risk early', desc: 'Proof of concepts test technology choices early, so costly surprises surface in week one, not month six.' },
+  { icon: 'compass', title: 'Business needs, translated', desc: 'We turn what your leadership wants to achieve into clear, operational deliverables your teams can build.' },
+  { icon: 'scale', title: 'Future-proof and resilient', desc: 'Right-sized infrastructure and licence models that scale with you and keep running when it matters.' },
   { icon: 'shield', title: 'Secure by design', desc: 'Data protection, threat safeguarding and governance built into every layer, not added at the end.' },
 ] as const;
 
 export const faqs = [
-  { q: 'What happens on the free consultation?', a: 'It’s a 30-minute video call with one of our consultants. You tell us what you’re trying to fix or build, we ask questions, and you leave with honest next steps, whether or not we end up working together.' },
+  { q: 'What happens after I get in touch?', a: 'A consultant reads your message and replies to arrange a conversation. You tell us what you’re trying to fix or build, we ask questions, and you get honest next steps, whether or not we end up working together.' },
+  { q: 'Can you manage delivery as well as advise?', a: 'Yes. We provide product strategy, product management and project management, and run delivery using Agile, Scrum or Waterfall, whichever suits your organisation and the work.' },
   { q: 'Do you work on a fixed price or time and materials?', a: 'Both. Assessments and well-defined projects are usually fixed price, with a scope of work agreed up front. Evolving programmes and ongoing advisory suit time and materials.' },
   { q: 'What does an AWS Well-Architected Review cover?', a: 'We assess your workloads against the six AWS pillars: operational excellence, security, reliability, performance efficiency, cost optimisation and sustainability. You get a report with prioritised fixes.' },
   { q: 'Can you get us ready for Cyber Essentials or ISO 27001?', a: 'Yes. We review where you are today, close the gaps and help you prepare the evidence you need. Monitoring and incident response are available alongside.' },
@@ -105,6 +109,8 @@ export const faqs = [
 
 export const quoteServices = [
   'AWS Solutions Architect Services',
+  'Product Strategy & Management',
+  'Project & Delivery Management',
   'Cybersecurity',
   'Penetration Testing (VAPT)',
   'Digital Consulting',

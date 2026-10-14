@@ -3,7 +3,7 @@ import { Sora, Outfit, JetBrains_Mono } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { RevealObserver } from '@/components/Motion';
-import { ChatWidget, CookieBanner } from '@/components/Widgets';
+import { CookieBanner } from '@/components/Widgets';
 import { site } from '@/lib/content';
 import './globals.css';
 
@@ -64,7 +64,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <ChatWidget />
         <CookieBanner />
       </body>
     </html>
