@@ -7234,6 +7234,222 @@ button.member:focus-visible {
 }
 
 /* ==========================================================================
+   Client review, 15 Oct 2026
+   ========================================================================== */
+
+/* Homepage hero photo mirrored so the two consultants sit right of the headline */
+.hero-bg.is-flipped img {
+  animation: bgZoomFlip 18s ease-out both;
+  transform: scale(-1, 1);
+  object-position: 60% 35%;
+}
+@keyframes bgZoomFlip {
+  from {
+    transform: scale(-1.14, 1.14);
+  }
+}
+
+/* Second hero photo crossfades in and out over the first on a 16s loop */
+.hero-bg-alt {
+  opacity: 0;
+  animation: heroSwap 16s ease-in-out 5s infinite both;
+}
+.hero-bg-alt img {
+  object-position: 68% 30%;
+  animation: heroDrift 16s ease-out 5s infinite both;
+}
+@keyframes heroSwap {
+  0%,
+  42% {
+    opacity: 0;
+  }
+  50%,
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes heroDrift {
+  0%,
+  42% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---------- Recruitment & placement (careers) ---------- */
+.recruit {
+  background: var(--navy);
+  color: #fff;
+}
+.recruit .section-head-side p {
+  color: var(--pale);
+}
+.recruit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.recruit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background: var(--navy-2);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #fff;
+  transition: background 0.3s, transform 0.45s var(--ease-out), box-shadow 0.45s;
+}
+.recruit-card:hover {
+  background: #16246a;
+}
+.recruit-card.is-action {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.recruit-card.is-action.alt {
+  background: var(--peri);
+  border-color: var(--peri);
+  color: var(--ink);
+}
+.recruit-card.is-action:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 var(--amber);
+}
+.recruit-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(255, 184, 28, 0.14);
+  color: var(--amber);
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+}
+.recruit-card.is-action .recruit-icon {
+  background: #fff;
+  color: var(--blue);
+}
+.recruit-card.is-action.alt .recruit-icon {
+  background: var(--navy);
+  color: #fff;
+}
+.recruit-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
+}
+.recruit-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--pale);
+}
+.recruit-card.is-action .recruit-desc {
+  color: #e6ecff;
+}
+.recruit-card.is-action.alt .recruit-desc {
+  color: #1b2553;
+}
+.recruit-link {
+  margin-top: auto;
+  padding-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.recruit-link svg {
+  transition: transform 0.35s var(--ease-out);
+}
+.recruit-card:hover .recruit-link svg {
+  transform: translateX(5px);
+}
+.recruit-employers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px 32px;
+  margin-top: 16px;
+  padding: 22px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+}
+.recruit-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: clamp(56px, 6vw, 88px);
+}
+.recruit-stat {
+  padding: 30px;
+  background: var(--peri);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.recruit-stat-n {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 0.9;
+}
+.recruit-stat-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.testimonial {
+  margin: 0;
+  padding: 30px;
+  border-left: 5px solid var(--blue);
+  background: var(--tint);
+}
+.testimonial blockquote {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.testimonial figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  color: var(--text);
+}
+.testimonial b {
+  color: var(--ink);
+}
+@media (max-width: 999px) {
+  .recruit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .recruit-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ==========================================================================
    Reduced motion
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {

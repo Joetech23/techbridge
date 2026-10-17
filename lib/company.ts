@@ -137,6 +137,18 @@ export const careerPerks = [
   { icon: 'shield', title: 'Build your portfolio', desc: 'Leave with work you can talk about and references from the people you worked with.' },
 ] as const;
 
+// Career and training tracks from Paschal (WhatsApp, 15 Oct 2026). Used by the job board and application form.
+export const careerTracks = [
+  'AWS Solutions Architect',
+  'AWS DevOps Engineering',
+  'Cybersecurity & Ethical Hacking',
+  'Healthcare Data Analysis',
+  'AI & Machine Learning',
+  'Data Governance',
+  'Business Analyst',
+  'Project Management',
+];
+
 export type JobType = 'Freelance' | 'Full Time' | 'Internship' | 'Part Time' | 'Temporary';
 export const jobTypes: JobType[] = ['Freelance', 'Full Time', 'Internship', 'Part Time', 'Temporary'];
 
@@ -158,7 +170,7 @@ export const opportunities: {
     location: 'London',
     remote: false,
     desc: 'A structured programme for recent graduates. Rotate across live client projects, learn from experienced consultants and build a career in technology consulting.',
-    areas: ['Cloud', 'Cyber security', 'Data & AI', 'Project delivery'],
+    areas: ['AWS Solutions Architect', 'AWS DevOps Engineering', 'Cybersecurity & Ethical Hacking', 'Healthcare Data Analysis', 'AI & Machine Learning', 'Data Governance', 'Business Analyst', 'Project Management'],
   },
   {
     slug: 'internship',
@@ -167,6 +179,41 @@ export const opportunities: {
     location: 'London',
     remote: false,
     desc: 'A fixed-term placement working across our services, with a clear plan for what you will learn and hands-on experience on client work.',
-    areas: ['Cloud', 'Managed IT', 'Cyber security', 'Digital consulting'],
+    areas: ['AWS Solutions Architect', 'AWS DevOps Engineering', 'Cybersecurity & Ethical Hacking', 'Healthcare Data Analysis', 'AI & Machine Learning', 'Data Governance', 'Business Analyst', 'Project Management'],
   },
 ];
+
+// Recruitment and placement section on /careers (structure modelled on castleendconsulting.co.uk,
+// wording TechBridge's own; requested by Paschal, 15 Oct 2026).
+export const recruitmentServices = [
+  {
+    title: 'Professional Employment Consulting',
+    desc: 'We help technology and financial services teams find people with the right skills, from graduates to experienced specialists.',
+  },
+  {
+    title: 'Explore our Candidate Database',
+    desc: 'Graduates, interns and professionals trained across cloud, security, data and delivery. Tell us what you need and we’ll introduce the right people.',
+  },
+  {
+    title: 'For employers across the UK',
+    desc: 'Contract, short-term and permanent placements, matched to your team, your budget and your timelines.',
+  },
+  {
+    title: 'Employment Recruiting',
+    desc: 'End-to-end recruiting: role scoping, sourcing, screening and interviews, so you only meet candidates who fit.',
+  },
+];
+
+export const recruitmentProcess = [
+  { title: 'Share your CV or role', desc: 'Candidates upload a CV; employers tell us about the role, skills and timelines.' },
+  { title: 'We match', desc: 'We review skills and goals on both sides and shortlist the strongest fits.' },
+  { title: 'Interview', desc: 'We arrange interviews and support candidates and employers through every stage.' },
+  { title: 'Placement and support', desc: 'We confirm the placement and stay in touch to make sure it works for everyone.' },
+];
+
+// Real TechBridge figures only. Leave empty until supplied and the counters stay hidden.
+// e.g. { value: 120, suffix: '+', label: 'CVs received' }
+export const recruitmentStats: { value: number; suffix?: string; label: string }[] = [];
+
+// Real, attributed testimonials only. Leave empty until supplied and the section stays hidden.
+export const testimonials: { quote: string; name: string; role: string }[] = [];

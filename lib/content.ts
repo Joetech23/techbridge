@@ -23,7 +23,9 @@ export const site = {
  * Replace with TechBridge's own photos when supplied.
  */
 export const img = {
-  heroWide: 'photo-1531482615713-2afd69097998',
+  heroWide: 'photo-1573497019329-8c73173b95fb',
+  // Careers hero: the woman coding with a colleague (previously the homepage hero).
+  careersHero: 'photo-1531482615713-2afd69097998',
   bandDark: 'photo-1680459575585-390ed5cfcae0',
   mosaicA: 'photo-1613186941372-f19da23e373b',
   mosaicB: 'photo-1758691737138-7b9b1884b1db',

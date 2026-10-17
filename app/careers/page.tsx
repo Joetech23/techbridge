@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import CareersForm from '@/components/CareersForm';
 import { WhyIcon, vars } from '@/components/Icons';
 import JobBoard from '@/components/JobBoard';
+import { RecruitmentProcess, RecruitmentProof, RecruitmentServices } from '@/components/Recruitment';
 import { Head } from '@/components/page/Cards';
 import PageHero from '@/components/page/PageHero';
 import { careerPerks } from '@/lib/company';
@@ -9,16 +10,9 @@ import { img, site } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Careers, Graduate Scheme & Internships | TechBridge',
-  description: 'Join the TechBridge graduate scheme or an internship. Work on real cloud, cyber security, data and delivery projects in London. Search our job openings.',
+  description: 'Careers and recruitment at TechBridge: graduate scheme, internships and job placements across AWS, DevOps, cyber security, data and project management. Upload your CV.',
   alternates: { canonical: '/careers' },
 };
-
-const applySteps = [
-  { title: 'Find your opening', desc: 'Search our openings for the graduate scheme or an internship that fits your interests.' },
-  { title: 'Send your application', desc: 'Share your details and a link to your CV or LinkedIn profile. It takes a few minutes.' },
-  { title: 'Talk to our team', desc: 'If there’s a fit, we’ll invite you to a conversation about your goals and the programme.' },
-  { title: 'Start on real projects', desc: 'Join a client team, learn from experienced consultants and build work you can talk about.' },
-];
 
 export default function CareersPage() {
   return (
@@ -28,13 +22,15 @@ export default function CareersPage() {
         label="Careers"
         title="Job openings at TechBridge."
         lede="Our graduate scheme and internships give you hands-on experience on real client projects in cloud, security, data and delivery."
-        image={img.meeting}
+        image={img.careersHero}
         actions={
           <a href="#openings" className="btn btn-light">
             Search openings
           </a>
         }
       />
+
+      <RecruitmentServices />
 
       <section id="openings" className="container section-pad">
         <Head label="Search job openings" title="Find your next step." side={<p>Filter by keyword, location and job type. New openings are added here first.</p>} />
@@ -58,18 +54,9 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="container section-pad">
-        <Head label="How it works" title="From application to your first project." />
-        <div className="span-grid">
-          {applySteps.map((s, i) => (
-            <div key={s.title} className="span-tile" data-reveal style={vars({ '--d': i * 100 })}>
-              <span className="span-no">{String(i + 1).padStart(2, '0')}</span>
-              <span className="span-title">{s.title}</span>
-              <span className="span-desc">{s.desc}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+      <RecruitmentProof />
+
+      <RecruitmentProcess />
 
       <section id="apply" className="tint-band section-pad">
         <div className="container apply-grid">

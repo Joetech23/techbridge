@@ -48,6 +48,8 @@ export const footerCols = [
       { label: 'Our team', href: '/team' },
       { label: 'Accreditations', href: '/accreditations' },
       { label: 'Careers', href: '/careers' },
+      { label: 'Job openings', href: '/careers#openings' },
+      { label: 'Submit your CV', href: '/careers#apply' },
       { label: 'Contact', href: '/contact' },
     ],
   },

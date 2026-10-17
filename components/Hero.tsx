@@ -12,8 +12,11 @@ export default function Hero() {
   return (
     <>
       <section id="top" className="hero" data-screen-label="Hero">
-        <div className="hero-bg">
-          <Photo id={img.heroWide} alt="TechBridge consultants working together at a screen" sizes="100vw" priority wide />
+        <div className="hero-bg is-flipped">
+          <Photo id={img.heroWide} alt="Two TechBridge consultants working together at a laptop" sizes="100vw" priority wide />
+        </div>
+        <div className="hero-bg hero-bg-alt" aria-hidden>
+          <Photo id={img.meeting} sizes="100vw" wide />
         </div>
         <div className="hero-shade" aria-hidden />
 

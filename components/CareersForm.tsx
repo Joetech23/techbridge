@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { opportunities } from '@/lib/company';
+import { careerTracks, opportunities } from '@/lib/company';
 import { site } from '@/lib/content';
 import { CheckDraw } from './Icons';
 
@@ -94,9 +94,16 @@ export default function CareersForm() {
         </select>
         <select aria-label="Area of interest" value={f.area} onChange={set('area')}>
           <option value="">Area of interest…</option>
-          {areas.map((a) => (
-            <option key={a}>{a}</option>
-          ))}
+          <optgroup label="Career and training tracks">
+            {careerTracks.map((a) => (
+              <option key={a}>{a}</option>
+            ))}
+          </optgroup>
+          <optgroup label="Practice areas">
+            {areas.map((a) => (
+              <option key={a}>{a}</option>
+            ))}
+          </optgroup>
         </select>
       </div>
       <label className={`cv-upload${cv ? ' has-file' : ''}${touched && !cv && !linkOk(f.link) ? ' invalid' : ''}`}>
