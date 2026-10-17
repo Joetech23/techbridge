@@ -56,7 +56,7 @@ export default function TeamPage() {
         <div className="join-band" data-reveal>
           <div>
             <span className="join-title">Want to work with us?</span>
-            <span className="join-desc">Explore our graduate scheme and internships across cloud, security, data and delivery.</span>
+            <span className="join-desc">Explore contract, freelance and consultancy opportunities across cloud, security, data and delivery.</span>
           </div>
           <Link href="/careers" className="btn btn-dark">
             View opportunities <ArrowDisc />

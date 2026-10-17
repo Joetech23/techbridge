@@ -12,7 +12,7 @@ const empty: Query = { keyword: '', location: '', remote: false };
 export default function JobBoard() {
   const [draft, setDraft] = useState<Query>(empty);
   const [query, setQuery] = useState<Query>(empty);
-  const [types, setTypes] = useState<JobType[]>(jobTypes);
+  const [types, setTypes] = useState<JobType[]>([...jobTypes]);
 
   const results = useMemo(() => {
     const words = query.keyword.toLowerCase().split(/\s+/).filter(Boolean);
@@ -32,7 +32,7 @@ export default function JobBoard() {
   const reset = () => {
     setDraft(empty);
     setQuery(empty);
-    setTypes(jobTypes);
+    setTypes([...jobTypes]);
   };
   const apply = (title: string) => {
     window.dispatchEvent(new CustomEvent('tb-apply', { detail: title }));
@@ -96,7 +96,7 @@ export default function JobBoard() {
             <li key={o.slug} className="job" style={vars({ '--i': i })}>
               <div className="job-main">
                 <span className="job-meta">
-                  <span className="job-type">{o.type}</span>
+                  {o.type !== o.title && <span className="job-type">{o.type}</span>}
                   <span>
                     {o.location}
                     {o.remote ? ' · Remote' : ''}

@@ -24,7 +24,7 @@ export const legal: Record<'privacy' | 'cookies' | 'terms', { title: string; seo
       {
         h: 'How we use it',
         p: [
-          'To respond to your enquiry, assess job and internship applications and send the newsletter you asked for. Our lawful bases are your consent, steps taken at your request before entering a contract, and our legitimate interest in running and improving our business.',
+          'To respond to your enquiry, assess job and placement applications and send the newsletter you asked for. Our lawful bases are your consent, steps taken at your request before entering a contract, and our legitimate interest in running and improving our business.',
           'We do not sell your personal data.',
         ],
       },

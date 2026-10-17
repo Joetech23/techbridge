@@ -9,8 +9,8 @@ import { careerPerks } from '@/lib/company';
 import { img, site } from '@/lib/content';
 
 export const metadata: Metadata = {
-  title: 'Careers, Graduate Scheme & Internships | TechBridge',
-  description: 'Careers and recruitment at TechBridge: graduate scheme, internships and job placements across AWS, DevOps, cyber security, data and project management. Upload your CV.',
+  title: 'Careers, Contract & Freelance Opportunities | TechBridge',
+  description: 'Careers and recruitment at TechBridge: contract, freelance, consultancy and project-based roles across AWS, DevOps, cyber security, data and project management. Upload your CV.',
   alternates: { canonical: '/careers' },
 };
 
@@ -21,7 +21,7 @@ export default function CareersPage() {
         crumbs={[{ label: 'Company', href: '/about' }, { label: 'Careers' }]}
         label="Careers"
         title="Job openings at TechBridge."
-        lede="Our graduate scheme and internships give you hands-on experience on real client projects in cloud, security, data and delivery."
+        lede="Contract, freelance and consultancy opportunities on real client projects in cloud, security, data and delivery."
         image={img.careersHero}
         actions={
           <a href="#openings" className="btn btn-light">

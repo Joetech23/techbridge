@@ -7,7 +7,7 @@ export const companyLinks = [
   { name: 'About us', desc: 'Our story, mission, values and how we work.', href: '/about' },
   { name: 'Our team', desc: 'The consultants and architects behind the work.', href: '/team' },
   { name: 'Accreditations & partners', desc: 'Platforms, standards and certifications.', href: '/accreditations' },
-  { name: 'Careers', desc: 'Graduate scheme and internship opportunities.', href: '/careers' },
+  { name: 'Careers', desc: 'Contract, freelance and consultancy opportunities.', href: '/careers' },
 ];
 
 export const serviceCats = [

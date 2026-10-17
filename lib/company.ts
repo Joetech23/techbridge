@@ -157,11 +157,32 @@ export const careerTracks = [
   'Project Management',
 ];
 
-export type JobType = 'Freelance' | 'Full Time' | 'Internship' | 'Part Time' | 'Temporary';
-export const jobTypes: JobType[] = ['Freelance', 'Full Time', 'Internship', 'Part Time', 'Temporary'];
+// Engagement types from Paschal (16 Oct 2026); they replace the graduate scheme and internship
+// and double as the job board's filter checkboxes. Every opening covers all career tracks.
+export const jobTypes = [
+  'Contract placements',
+  'Freelance project roles',
+  'Independent contractor engagements',
+  'Project-based assignments',
+  'Consultancy engagements',
+  'Statement of Work (SoW) projects',
+  'Self-employed work experience',
+  'Fixed-term contract projects',
+] as const;
+export type JobType = (typeof jobTypes)[number];
 
-// Openings shown on /careers. 'Voluntary' was renamed to graduate scheme and internship (demo session, 13 Oct 2026).
-// Confirm job type, location and remote status with DGCL; add new roles here and the job board picks them up.
+// Openings shown on /careers. Confirm location and remote status with DGCL; the job board picks up changes here.
+const openingDescs: Record<JobType, string> = {
+  'Contract placements': 'Contract roles placed with client teams, working on live cloud, security, data and delivery projects for an agreed term.',
+  'Freelance project roles': 'Flexible project roles for freelancers who want to apply their skills to real client work alongside our consultants.',
+  'Independent contractor engagements': 'Engagements for independent contractors, scoped around clear outcomes and delivered with the support of our team.',
+  'Project-based assignments': 'Assignments tied to a single project, from discovery and design through to delivery and handover.',
+  'Consultancy engagements': 'Join our consultants on client engagements, advising on and delivering technology, security and data work.',
+  'Statement of Work (SoW) projects': 'Projects delivered against an agreed Statement of Work, with defined scope, deliverables and timelines.',
+  'Self-employed work experience': 'Build hands-on experience on client projects while working on a self-employed basis.',
+  'Fixed-term contract projects': 'Fixed-term contracts on defined projects, with a clear start date, end date and set of deliverables.',
+};
+
 export const opportunities: {
   slug: string;
   title: string;
@@ -170,26 +191,15 @@ export const opportunities: {
   remote: boolean;
   desc: string;
   areas: string[];
-}[] = [
-  {
-    slug: 'graduate-scheme',
-    title: 'Graduate Scheme',
-    type: 'Full Time',
-    location: 'London',
-    remote: false,
-    desc: 'A structured programme for recent graduates. Rotate across live client projects, learn from experienced consultants and build a career in technology consulting.',
-    areas: ['AWS Solutions Architect', 'AWS DevOps Engineering', 'Cybersecurity & Ethical Hacking', 'Healthcare Data Analysis', 'AI & Machine Learning', 'Data Governance', 'Business Analyst', 'Project Management'],
-  },
-  {
-    slug: 'internship',
-    title: 'Internship',
-    type: 'Internship',
-    location: 'London',
-    remote: false,
-    desc: 'A fixed-term placement working across our services, with a clear plan for what you will learn and hands-on experience on client work.',
-    areas: ['AWS Solutions Architect', 'AWS DevOps Engineering', 'Cybersecurity & Ethical Hacking', 'Healthcare Data Analysis', 'AI & Machine Learning', 'Data Governance', 'Business Analyst', 'Project Management'],
-  },
-];
+}[] = jobTypes.map((t) => ({
+  slug: t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+  title: t,
+  type: t,
+  location: 'London',
+  remote: false,
+  desc: openingDescs[t],
+  areas: careerTracks,
+}));
 
 // Recruitment and placement section on /careers (structure modelled on castleendconsulting.co.uk,
 // wording TechBridge's own; requested by Paschal, 15 Oct 2026).
