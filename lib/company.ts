@@ -74,6 +74,10 @@ export const team: Member[] = [
     role: 'Lead Delivery Manager, Agile Transformation',
     photo: '/team/calvin-agu.jpg',
     pos: '40% 30%',
+    bio: [
+      'Calvin Agu is an Agile Delivery Lead specialising in AWS data platforms and other complex technology programmes. He brings together technical teams, research, delivery partners and business stakeholders to coordinate delivery, manage dependencies and strengthen operational readiness.',
+      'His experience includes supporting cloud and data-platform delivery, with a focus on clear governance, risk management, research and integration testing. Calvin combines practical delivery leadership with Agile coaching to improve collaboration, build team capability and keep delivery aligned with business priorities.',
+    ],
     certs: [],
   },
   {
@@ -82,6 +86,10 @@ export const team: Member[] = [
     role: 'Technical Lead Consultant',
     photo: '/team/kaustuv-prajapati.jpeg',
     pos: '50% 30%',
+    bio: [
+      'Kaustuv Prajapati is a London-based AWS DevOps and Platform Engineer with over six years of experience in cloud infrastructure, CI/CD, Kubernetes platforms and infrastructure automation.',
+      'He specialises in AWS, Terraform, GitHub Actions, GitLab CI, Linux operations and platform security, with experience supporting regulated and customer-facing environments.',
+    ],
     certs: [],
   },
   {
