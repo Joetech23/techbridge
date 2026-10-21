@@ -3,8 +3,8 @@ import { industries, industryHref } from './industries';
 import { posts, postHref } from './insights';
 import { serviceHref, services } from './services';
 
-// Accreditations & partners page is hidden for now (client, 21 Oct 2026). Set to true to bring it back.
-export const showPartners = false;
+// Set to false to hide the Accreditations & partners page and every link to it.
+export const showPartners = true;
 
 export const companyLinks = [
   { name: 'About us', desc: 'Our story, mission, values and how we work.', href: '/about' },
