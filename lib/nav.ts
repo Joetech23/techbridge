@@ -3,12 +3,15 @@ import { industries, industryHref } from './industries';
 import { posts, postHref } from './insights';
 import { serviceHref, services } from './services';
 
+// Accreditations & partners page is hidden for now (client, 21 Oct 2026). Set to true to bring it back.
+export const showPartners = false;
+
 export const companyLinks = [
   { name: 'About us', desc: 'Our story, mission, values and how we work.', href: '/about' },
   { name: 'Our team', desc: 'The consultants and architects behind the work.', href: '/team' },
   { name: 'Accreditations & partners', desc: 'Platforms, standards and certifications.', href: '/accreditations' },
   { name: 'Careers', desc: 'Contract, freelance and consultancy opportunities.', href: '/careers' },
-];
+].filter((l) => showPartners || l.href !== '/accreditations');
 
 export const serviceCats = [
   { label: 'Strategy & Advisory', slugs: ['digital-consulting', 'devops-maturity-assessment'] },
@@ -46,7 +49,7 @@ export const footerCols = [
     links: [
       { label: 'About us', href: '/about' },
       { label: 'Our team', href: '/team' },
-      { label: 'Accreditations', href: '/accreditations' },
+      ...(showPartners ? [{ label: 'Accreditations', href: '/accreditations' }] : []),
       { label: 'Careers', href: '/careers' },
       { label: 'Job openings', href: '/careers#openings' },
       { label: 'Submit your CV', href: '/careers#apply' },

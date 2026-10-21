@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { ArrowDisc, CheckIcon, vars } from '@/components/Icons';
 import { Head } from '@/components/page/Cards';
 import PageHero from '@/components/page/PageHero';
 import { accreditations, platformPartners, standards } from '@/lib/company';
+import { showPartners } from '@/lib/nav';
 
 export const metadata: Metadata = {
   title: 'Accreditations & Partners | TechBridge',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function AccreditationsPage() {
+  if (!showPartners) notFound();
   return (
     <>
       <PageHero

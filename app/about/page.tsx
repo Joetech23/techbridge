@@ -8,6 +8,7 @@ import Photo from '@/components/Photo';
 import Process from '@/components/Process';
 import TeamGrid from '@/components/TeamGrid';
 import { values } from '@/lib/company';
+import { showPartners } from '@/lib/nav';
 import { img } from '@/lib/content';
 import { industries, industryHref } from '@/lib/industries';
 
@@ -82,20 +83,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container section-pad">
-        <div className="link-panels">
-          <Link href="/team" className="link-panel" data-reveal>
-            <span className="link-panel-title">Meet the team</span>
-            <span className="link-panel-desc">The consultants and architects behind the work.</span>
-            <ArrowDisc />
-          </Link>
-          <Link href="/accreditations" className="link-panel" data-reveal style={vars({ '--d': 100 })}>
-            <span className="link-panel-title">Accreditations and partners</span>
-            <span className="link-panel-desc">The platforms we work on and the standards we help you meet.</span>
-            <ArrowDisc />
-          </Link>
-        </div>
-      </section>
+      {showPartners && (
+        <section className="container section-pad">
+          <div className="link-panels">
+            <Link href="/team" className="link-panel" data-reveal>
+              <span className="link-panel-title">Meet the team</span>
+              <span className="link-panel-desc">The consultants and architects behind the work.</span>
+              <ArrowDisc />
+            </Link>
+            <Link href="/accreditations" className="link-panel" data-reveal style={vars({ '--d': 100 })}>
+              <span className="link-panel-title">Accreditations and partners</span>
+              <span className="link-panel-desc">The platforms we work on and the standards we help you meet.</span>
+              <ArrowDisc />
+            </Link>
+          </div>
+        </section>
+      )}
     </>
   );
 }

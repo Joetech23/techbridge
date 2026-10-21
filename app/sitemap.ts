@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { site } from '@/lib/content';
 import { industries } from '@/lib/industries';
 import { posts } from '@/lib/insights';
+import { showPartners } from '@/lib/nav';
 import { services } from '@/lib/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/team',
-    '/accreditations',
+    ...(showPartners ? ['/accreditations'] : []),
     '/careers',
     '/contact',
     '/case-studies',

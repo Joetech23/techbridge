@@ -95,6 +95,11 @@ export async function POST(req: Request) {
   try {
     const sent = await send(to, fields.Email, subject, fields, cv ? [cv] : []);
     console.info('[contact]', JSON.stringify({ type, to, sent, ...fields, receivedAt: new Date().toISOString() }));
+    // In production, never tell someone their message arrived when email isn't configured.
+    if (!sent && process.env.NODE_ENV === 'production') {
+      console.error('[contact] RESEND_API_KEY or MAIL_FROM is not set; nothing was sent');
+      return NextResponse.json({ ok: false, error: 'We could not send your message. Please email us directly.' }, { status: 503 });
+    }
   } catch (err) {
     console.error('[contact] send failed', err);
     return NextResponse.json({ ok: false, error: 'We could not send your message. Please email us directly.' }, { status: 502 });
