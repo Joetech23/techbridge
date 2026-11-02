@@ -93,6 +93,18 @@ export const team: Member[] = [
     certs: [],
   },
   {
+    slug: 'sandra-amah',
+    name: 'Sandra Amah',
+    role: 'Project Manager and Software Quality Assurance',
+    photo: '/team/sandra-amah.jpg',
+    pos: '50% 50%',
+    bio: [
+      'Sandra Amah is an accomplished Project Manager and Software Quality Assurance professional with over six years of experience (since 2020) leading technology, digital transformation and business improvement initiatives. Sandra has successfully managed cross-functional projects from concept to delivery, ensuring alignment with strategic objectives while maintaining excellence in quality, governance and stakeholder engagement.',
+      'Sandra’s expertise spans project management, software quality assurance, business analysis, Agile and Waterfall delivery, risk management, process optimisation and ISO management systems, including quality, information security, business continuity and IT service management. Sandra is passionate about helping organisations improve operational efficiency, strengthen compliance and deliver innovative, customer-focused solutions.',
+    ],
+    certs: [],
+  },
+  {
     slug: 'john-mulligan',
     name: 'John Mulligan',
     role: 'Client Engagement, Sales and Marketing Advisor',
