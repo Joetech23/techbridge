@@ -9,9 +9,9 @@ export const legal: Record<'privacy' | 'cookies' | 'terms', { title: string; seo
     title: 'Privacy policy',
     seoTitle: 'Privacy Policy | TechBridge',
     desc: 'How TechBridge Consultancy collects, uses and protects your personal data.',
-    updated: 'October 2026',
+    updated: 'November 2026',
     body: [
-      { p: [`This policy explains how ${site.legalName} (“TechBridge”, “we”, “us”) collects and uses personal data when you use this website or contact us. We are the data controller for this information.`] },
+      { p: [`This policy explains how ${site.legalName} (“TechBridge”, “we”, “us”) collects and uses personal data when you use this website or contact us. We are the data controller for this information and are registered with the Information Commissioner’s Office (ICO) under registration number ${site.ico.number}.`] },
       {
         h: 'What we collect',
         list: [

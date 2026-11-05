@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { site } from '@/lib/content';
 import { footerCols } from '@/lib/nav';
 import Briefing from './Briefing';
-import { ArrowDisc, MailIcon, PinIcon, vars } from './Icons';
+import { ArrowDisc, MailIcon, PinIcon, WhyIcon, vars } from './Icons';
 
 export default function Footer() {
   return (
@@ -61,6 +61,15 @@ export default function Footer() {
                 </a>
               )}
             </div>
+            <a href={site.ico.url} target="_blank" rel="noopener noreferrer" className="trust-badge">
+              <span className="trust-badge-icon">
+                <WhyIcon name="shield" />
+              </span>
+              <span className="trust-badge-text">
+                <strong>Registered with the ICO</strong>
+                <span>UK data protection register, no. {site.ico.number}</span>
+              </span>
+            </a>
           </div>
           {footerCols.map((fc, i) => (
             <div key={fc.title} className="footer-col" data-reveal style={vars({ '--d': i * 70 })}>

@@ -12,6 +12,8 @@ export const site = {
   phone: '',
   // WhatsApp and live chat are switched off by decision (demo session, 13 Oct 2026). Contact form only.
   linkedin: 'https://www.linkedin.com/company/techbridge-consultancy-ltd/',
+  // Data protection register entry at the Information Commissioner's Office.
+  ico: { number: 'ZC293923', url: 'https://ico.org.uk/ESDWebPages/Entry/ZC293923' },
   clientPortal: '#',
   knowledgeBase: '#',
   teamPhoto: '', // e.g. '/assets/team.jpg'
