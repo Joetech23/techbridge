@@ -11,7 +11,7 @@ export const site = {
   // Day-1 content from the client (proposal §06). Leave empty until supplied; the UI falls back gracefully.
   phone: '',
   // WhatsApp and live chat are switched off by decision (demo session, 13 Oct 2026). Contact form only.
-  linkedin: '', // DGCL to supply once the LinkedIn page is live
+  linkedin: 'https://www.linkedin.com/company/techbridge-consultancy-ltd/',
   clientPortal: '#',
   knowledgeBase: '#',
   teamPhoto: '', // e.g. '/assets/team.jpg'

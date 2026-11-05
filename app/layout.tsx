@@ -37,6 +37,7 @@ const jsonLd = {
   url: site.url,
   email: site.email,
   logo: `${site.url}/assets/tb-logo.png`,
+  sameAs: [site.linkedin],
   address: {
     '@type': 'PostalAddress',
     streetAddress: site.address.street,

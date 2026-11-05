@@ -82,7 +82,7 @@ export default function Footer() {
             <Link href="/privacy">Privacy</Link>
             <Link href="/cookies">Cookies</Link>
             <Link href="/terms">Terms</Link>
-            <a href="#">LinkedIn</a>
+            <a href={site.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="#">X</a>
           </div>
         </div>
